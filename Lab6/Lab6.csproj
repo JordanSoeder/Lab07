@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F1E8AF43-FCC7-4ED7-9A64-2D0E6843651B}</ProjectGuid>
+    <ProjectGuid>{F514BC33-E08E-4EF0-8460-2B58F53C80E8}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lab06</RootNamespace>
-    <AssemblyName>Lab06</AssemblyName>
+    <RootNamespace>Lab6</RootNamespace>
+    <AssemblyName>Lab6</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -45,12 +45,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -132,35 +126,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CoursesController.cs" />
-    <Compile Include="Controllers\EnrollmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902211245318_InitialCreate.cs" />
-    <Compile Include="Migrations\201902211245318_InitialCreate.Designer.cs">
-      <DependentUpon>201902211245318_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903032027561_Update.cs" />
-    <Compile Include="Migrations\201903032027561_Update.Designer.cs">
-      <DependentUpon>201903032027561_Update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903032032060_Update2.cs" />
-    <Compile Include="Migrations\201903032032060_Update2.Designer.cs">
-      <DependentUpon>201903032032060_Update2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201903032036154_Update3.cs" />
-    <Compile Include="Migrations\201903032036154_Update3.Designer.cs">
-      <DependentUpon>201903032036154_Update3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\Enrollment.cs" />
-    <Compile Include="Models\EnrollmentDB.cs" />
-    <Compile Include="Models\InvalidChars.cs" />
-    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -199,24 +168,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Enrollments\Create.cshtml" />
-    <Content Include="Views\Enrollments\Delete.cshtml" />
-    <Content Include="Views\Enrollments\Details.cshtml" />
-    <Content Include="Views\Enrollments\Edit.cshtml" />
-    <Content Include="Views\Enrollments\Index.cshtml" />
-    <Content Include="Views\Students\Create.cshtml" />
-    <Content Include="Views\Students\Delete.cshtml" />
-    <Content Include="Views\Students\Details.cshtml" />
-    <Content Include="Views\Students\Edit.cshtml" />
-    <Content Include="Views\Students\Index.cshtml" />
-    <Content Include="Views\Courses\Create.cshtml" />
-    <Content Include="Views\Courses\Delete.cshtml" />
-    <Content Include="Views\Courses\Details.cshtml" />
-    <Content Include="Views\Courses\Edit.cshtml" />
-    <Content Include="Views\Courses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -230,20 +185,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902211245318_InitialCreate.resx">
-      <DependentUpon>201902211245318_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903032027561_Update.resx">
-      <DependentUpon>201903032027561_Update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903032032060_Update2.resx">
-      <DependentUpon>201903032032060_Update2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201903032036154_Update3.resx">
-      <DependentUpon>201903032036154_Update3.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -261,9 +202,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>57867</DevelopmentServerPort>
+          <DevelopmentServerPort>55322</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:57867/</IISUrl>
+          <IISUrl>http://localhost:55322/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
